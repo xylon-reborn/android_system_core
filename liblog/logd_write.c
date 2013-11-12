@@ -27,6 +27,12 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+#ifdef MOTOROLA_LOG
+#if HAVE_LIBC_SYSTEM_PROPERTIES
+#include <sys/system_properties.h>
+#endif
+#endif
+
 #include <log/logger.h>
 #include <log/logd.h>
 #include <log/log.h>
