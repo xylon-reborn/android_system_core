@@ -108,3 +108,4 @@ static inline bool audio_is_low_visibility(audio_stream_type_t stream)
 __END_DECLS
 
 #endif  // ANDROID_AUDIO_POLICY_CORE_H
+
