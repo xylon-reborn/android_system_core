@@ -32,6 +32,12 @@ __BEGIN_DECLS
  * frameworks/base/include/media/AudioSystem.h
  */
 
+#define AMR_FRAMESIZE 32
+#define QCELP_FRAMESIZE 35
+#define EVRC_FRAMESIZE 23
+#define AMR_WB_FRAMESIZE 61
+#define AAC_FRAMESIZE 2048
+
 /* device address used to refer to the standard remote submix */
 #define AUDIO_REMOTE_SUBMIX_DEVICE_ADDRESS "0"
 
@@ -50,6 +56,9 @@ typedef enum {
     AUDIO_STREAM_ENFORCED_AUDIBLE = 7, /* Sounds that cannot be muted by user and must be routed to speaker */
     AUDIO_STREAM_DTMF             = 8,
     AUDIO_STREAM_TTS              = 9,
+#ifdef QCOM_HARDWARE
+    AUDIO_STREAM_INCALL_MUSIC     = 10,
+#endif
 
     AUDIO_STREAM_CNT,
     AUDIO_STREAM_MAX              = AUDIO_STREAM_CNT - 1,
